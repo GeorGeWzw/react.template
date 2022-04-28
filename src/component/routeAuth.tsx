@@ -34,7 +34,8 @@ const Main: IMenuRoute[] = [
   }
 ]
 
-class RouteAuth extends React.Component<any> {
+ class RouteAuth extends React.PureComponent<any> {
+  
   // @IocProvider(IocTypes.MenuService)
   // private menus!: IMenuService;
   private handleRouters(menu: IMenuOutput[]) {
@@ -64,7 +65,7 @@ class RouteAuth extends React.Component<any> {
       await store.dispatch({
         type: USER_MENU,
         // data: this.menus.menusByShow
-        data: require("@/core/constans/menu").menuList
+        data: require("@/constans/menu").menuList
       })
       // message.success(res.message);
       // } else {
@@ -152,4 +153,4 @@ class RouteAuth extends React.Component<any> {
     }
   }
 }
-export default withRouter(RouteAuth);
+export default withRouter(RouteAuth as any);

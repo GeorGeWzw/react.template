@@ -1,8 +1,10 @@
-import React, { Suspense } from "react";
 import { BrowserRouter, Switch } from "react-router-dom";
-import RouterAuth from "@/component/routeAuth";
-import NotFound from "@/router/constans/notFound";
+import React, { Suspense } from "react";
+
 import Login from "@/router/constans/login";
+import NotFound from "@/router/constans/notFound";
+import RouterAuth from "@/component/routeAuth";
+
 const routes = [
   ...Login,
   ...NotFound
